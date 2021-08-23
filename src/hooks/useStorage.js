@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { projectFirestore, projectStorage, timestamp } from "../config/firebaseConfig";
 
-
 const useStorage = (file) => {
     const [progess, setProgess] = useState(0);
     const [error, setError] = useState(null);
@@ -21,6 +20,7 @@ const useStorage = (file) => {
             const createdAt = timestamp();
 
             collectionRef.add({
+                name: file.name,
                 url,
                 createdAt
             });

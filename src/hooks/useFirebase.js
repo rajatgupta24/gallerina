@@ -11,8 +11,11 @@ const useFirebase = (collection) => {
                 let documents = [];
 
                 snap.forEach(doc => {
-                    const data = doc._delegate._document.data.value.mapValue.fields;
-                    documents.push({...data});
+                    documents.push({
+                        ...doc.data(),
+                        id: doc.id,
+                        createdAt: doc.data().createdAt && doc.data().createdAt.toDate()
+                    });
                 });
 
                 setDocs(documents);
