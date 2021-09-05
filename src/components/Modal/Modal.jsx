@@ -13,9 +13,7 @@ function Modal({ selectedImg, setSelectedImg }) {
     }
     
     return (
-        <div className="backdrop"
-            onClick={clickHandler}
-        >
+        <div className="backdrop" onClick={clickHandler}>
             <img src={selectedImg.url} alt="modal" />
             <div className="btns">
                 <button className="btn" onClick={() => deleteHandler(selectedImg)}>Delete</button>

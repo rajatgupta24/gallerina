@@ -13,11 +13,23 @@ body{
   max-width: 960px;
   margin: 0 auto;
 }
-.title h1{
+.title h1, a{
   color: var(--primary);
   font-size: 1.2rem;
   letter-spacing: 2px;
   font-weight: normal;
+  text-decoration: none;
+}
+.nav{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.login-form{
+  display: flex;
+}
+.form-btn{
+  margin-right: 1rem;
 }
 .title h2, .title p{
   text-align: center;
